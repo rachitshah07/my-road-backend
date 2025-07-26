@@ -10,6 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 def dms_to_decimal(degrees, minutes, seconds, ref):
+    print("dms-to-decimal")
     value = degrees + minutes / 60 + seconds / 3600
     if ref in ['S', 'W']:
         value = -value
